@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /*
  * main - Starting point
  * returns 1
