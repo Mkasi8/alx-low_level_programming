@@ -10,9 +10,9 @@ int main(void)
 {
 	char count;
 
-	count = a;
+	count = 'a';
 
-	while (count <= z)
+	while (count <= 'z')
 		_putchar(count);
 
 	_putchar('\n');
