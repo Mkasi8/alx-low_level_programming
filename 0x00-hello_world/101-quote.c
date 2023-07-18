@@ -1,9 +1,12 @@
 #include <stdio.h>
 #include <unistd.h>
-/*
- * main - Starting point
- * Description: prints a line of string the way it is
- * returns 1
+
+/**
+ * main - print quote
+ *
+ * Description: prints Dors's quote
+ *
+ * Return: Always 1 (Success)
  */
 
 int main(void)
