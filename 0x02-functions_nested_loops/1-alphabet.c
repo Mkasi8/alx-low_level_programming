@@ -13,8 +13,10 @@ int main(void)
 	count = 'a';
 
 	while (count <= 'z')
+	{
 		_putchar(count);
-
+		count++;
+	}
 	_putchar('\n');
 
 	return (0);
