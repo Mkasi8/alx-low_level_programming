@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_last_digit - print las digit of a number
- * @n: number to extract last digit from 
+ * print_last_digit - print lats digit of a number
+ * @n: number to extract last digit from
  * Return: n
  */
 
