@@ -4,9 +4,9 @@
 #include <math.h>
 
 /**
- *  main - print password.
- *  
- *  Return: 0
+ * main - print password.
+ *
+ * Return: 0
  */
 
 int main(void)
