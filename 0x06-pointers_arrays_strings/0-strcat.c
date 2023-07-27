@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * -strncat - concatinates two strings
+ * _strncat - concatinates two strings
  *
  *  @dest: string to concatinate
  *  @src: string to concatinate
@@ -9,8 +9,7 @@
  *  Return: dest
  *
  */
-
-char *_strncat(char *dest, char *src, int n)
+char *_strcat(char *dest, char *src)
 {
 	int i, j;
 
