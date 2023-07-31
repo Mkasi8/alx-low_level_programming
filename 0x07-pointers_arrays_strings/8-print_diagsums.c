@@ -1,4 +1,4 @@
-#include "maiin.h"
+#include "main.h"
 #include <stdio.h>
 /**
 * print_diagsums - print the sum of the two diagonals of a squeare matrix
