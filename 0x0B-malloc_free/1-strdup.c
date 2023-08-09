@@ -8,24 +8,28 @@
  * @str: string to duplicate
  * Return: NULL if string = null, return pointer for success
  */
-
 char *_strdup(char *str)
 {
-	char *new;
-
-	int i, len;
+	char *cpy;
+	int index, len;
 
 	if (str == NULL)
 		return (NULL);
-	for (len = 0; str[len] != '\0'; len++)
-		i++;
 
-	new = malloc(sizeof(*new) * (i + 1));
+	for (index = 0; str[index]; index++)
+		len++;
+	cpy = malloc(sizeof(char) * (len + 1));
 
-	if (new == NULL)
+	if (cpy == NULL)
 		return (NULL);
-	for (len = 0; len < i; len++)
-		new[len] = str[len];
-	new[len] = '\0';
-	return (new);
+
+	for (index = 0; str[index]; index++)
+	{
+		cpy[index] = str[index];
+	}
+
+	cpy[len] = '\0';
+
+	return (cpy);
+
 }
