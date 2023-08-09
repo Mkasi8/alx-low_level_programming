@@ -6,7 +6,7 @@
  * string given as a parameter.i
  *
  * @str: string to duplicate
- * return: NULL if string = null, return pointer for success
+ * Return: NULL if string = null, return pointer for success
  */
 
 char *_strdup(char *str)
@@ -26,6 +26,6 @@ char *_strdup(char *str)
 		return (NULL);
 	for (len = 0; len < i; len++)
 		new[len] = str[len];
-	new[len] = '\0'
+	new[len] = '\0';
 	return (new);
 }
