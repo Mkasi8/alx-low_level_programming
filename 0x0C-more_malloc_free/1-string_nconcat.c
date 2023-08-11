@@ -10,32 +10,35 @@
  * Return: s1
  *
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *ptr;
+	char *result;
+	unsigned int i, j, s1_len, s2_len;
 
-	unsigned int i;
+	/* if s1 or s2 is NULL, treat it as an empty string */
+	s1 == NULL ? s1 = "" : s1;
+	s2 == NULL ? s2 = "" : s2;
 
-	unsigned int j;
+	/* find length of s1 and s2 */
+	for (s1_len = 0; s1[s1_len]; s1_len++)
+		;
+	for (s2_len = 0; s2[s2_len]; s2_len++)
+		;
 
-	int len;
+	/* if n is greater than or equal to the length of s2, use the entire s2 */
+	n >= s2_len ? n = s2_len : n;
 
-	int len1;
+	/* allocate memory for concatenated string */
+	result = malloc(sizeof(char) * (s1_len + n + 1));
+	if (result == NULL)
+		return (NULL);
 
-	for (len = 0; s1[len] != '\0'; len++)
-	for (len1 = 0; s2[len1] != '\0'; len1++)
+	/* add s1 and s2 to s */
+	for (i = 0; i < s1_len; i++)
+		result[i] = s1[i];
+	for (j = 0; j < n; j++)
+		result[i + j] = s2[j];
 
-	if (n < len1)
-		ptr = malloc(len + n + sizeof(char) - 1);
-	else
-		ptr = malloc(len + len1 + sizeof(char));
-	for (i = 0; i < len; i++)
-		ptr[i] = s1[i];
-	for (j = 0; j < len1; j++)
-		s1[i++] = s2[j];
-
-	s1[i] = '\0';
-
-	return (ptr);
+	result[i + j] = '\0';
+	return (result);
 }
