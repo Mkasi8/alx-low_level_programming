@@ -3,8 +3,11 @@
 /**
  * _sqrt_recursion - returns the natural square root of a number
  * @n: number to square root
+ * @i: count
  * Return: square root
  */
+
+int helper(int n, int i);
 
 int _sqrt_recursion(int n)
 {
